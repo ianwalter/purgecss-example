@@ -1,9 +1,12 @@
 const { join } = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  mode: process.env.NODE_ENV || 'development',
+  mode: isProduction ? 'production' : 'development',
   entry: './src/main.jsx',
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -17,7 +20,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
+          ...(isProduction ? [MiniCssExtractPlugin.loader] : ['style-loader']),
           {
             loader: 'css-loader',
             options: { importLoaders: 2 }
@@ -36,6 +39,7 @@ module.exports = {
     ]
   },
   plugins: [
+    ...(isProduction ? [new MiniCssExtractPlugin()] : []),
     new HtmlWebpackPlugin({ template: './src/index.html' })
   ]
 }

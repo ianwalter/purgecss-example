@@ -8,7 +8,7 @@ import Home from '@/Home'
 import About from '@/About'
 
 render((
-  <div className="container">
+  <div className="container pt-5">
 
     <Nav />
 
