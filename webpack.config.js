@@ -17,11 +17,19 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
+          'style-loader',
           {
             loader: 'css-loader',
             options: { importLoaders: 2 }
           },
-          'purgecss-loader',
+          {
+            loader: 'purgecss-loader',
+            options: {
+              content: [
+                join(__dirname, 'src/**/*.jsx')
+              ]
+            }
+          },
           'sass-loader'
         ]
       }

@@ -10,17 +10,22 @@
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
   "license": "ISC",
   "dependencies": {
-    "preact": "^8.3.1"
+    "preact": "^8.3.1",
+    "preact-router": "^2.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "bootstrap": "^4.1.3",
     "css-loader": "^1.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
     "purgecss-loader": "ianwalter/purgecss-loader",
     "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
     "webpack": "^4.17.2",
     "webpack-command": "^0.4.1",
     "webpack-serve": "^2.0.2"
