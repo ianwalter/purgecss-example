@@ -4,7 +4,7 @@
   "description": "A simple example of a Webpack-generated Preact application using Purgecss",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-serve",
+    "start": "webpack-dev-server",
     "build": "webpack"
   },
   "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
@@ -27,8 +27,8 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.17.2",
-    "webpack-command": "^0.4.1",
-    "webpack-serve": "^2.0.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "browserslist": [
     "> 0.25%"
